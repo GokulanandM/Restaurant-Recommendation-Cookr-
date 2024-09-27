@@ -12,12 +12,12 @@ import networkx as nx
 
 # --- Data Loading and Preprocessing ---
 # Read data from Excel file
-file_path = r"C:\Users\srikr\Desktop\COLLEGE\Sem 4\ADSA\ADSA PR\Employee.xlsx"
+file_path = "Employee.xlsx"
 df_employee = pd.read_excel(file_path)
 
 # Load the CSV data for Chennai and Coimbatore
-file_path_chennai = r"C:\Users\srikr\Desktop\COLLEGE\Sem 4\ADSA\ADSA PR\Zomato Chennai Listing 2020.csv"
-file_path_coimbatore = r"C:\Users\srikr\Desktop\COLLEGE\Sem 4\ADSA\ADSA PR\Coimbatore Restaraunts.csv"
+file_path_chennai = "Zomato Chennai Listing 2020.csv"
+file_path_coimbatore = "Coimbatore Restaraunts.csv"
 df_chennai = pd.read_csv(file_path_chennai)
 df_coimbatore = pd.read_csv(file_path_coimbatore)
 
@@ -93,7 +93,7 @@ def chennai_restaurants_page():
     st.title("Chennai Restaurants")
 
     # Display the image at the top of the page
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Chennai Restaurants")
 
     # Sidebar with options
@@ -156,7 +156,7 @@ def restaurant_recommendation(user_lat, user_lon, data):
 # Display the recommendation page
 def recommend_nearby_restaurants_page():
     st.title("Recommend Nearby Restaurants")
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Restaurant Recommendation")
 
     user_location = get_user_location()
@@ -181,7 +181,7 @@ def sort_data_by_rating(data):
 # Display top restaurants sorted by star count
 def review_rating_page():
     st.title("Review and Rating")
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Review and Rating")
 
     data = df_coimbatore
@@ -199,7 +199,7 @@ def get_restaurant_details(data, restaurant_name):
 # Display selected restaurant details inside a box
 def select_restaurant_page():
     st.title("Select Restaurant")
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Select Restaurant")
 
     data = df_coimbatore
@@ -235,7 +235,7 @@ def select_restaurant_page():
 # Find user's location and display it
 def find_location_page():
     st.title("Find Your Location")
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Find Your Location")
 
     user_location = get_user_location()
@@ -248,7 +248,7 @@ def find_location_page():
 # Open Google Maps
 def open_maps_page():
     st.title("Open Maps")
-    image = Image.open(r"C:\Users\srikr\Desktop\COLLEGE\Sem 5\Poster\Best Route Optimization for a Person and Restaurants.png")
+    image = Image.open("Best Route Optimization for a Person and Restaurants.png")
     st.image(image, caption="Open Maps")
 
     map_url = ("https://www.google.com/maps/d/u/0/"
