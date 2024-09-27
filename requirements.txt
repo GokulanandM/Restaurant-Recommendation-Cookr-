@@ -1,0 +1,9 @@
+streamlit
+pandas
+geopy
+numpy
+requests
+pillow
+geocoder
+networkx
+openpyxl
